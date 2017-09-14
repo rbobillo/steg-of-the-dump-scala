@@ -1,4 +1,4 @@
-case class Encoder(homoglyphsDict: Map[Char, Array[Char]], secretAlphabet: String) extends Utils {
+class Encoder(homoglyphsDict: Map[Char, Array[Char]], secretAlphabet: String) extends Utils {
 
   private def secretToBinaryString(secret: String, sAlpha: String, sAlphaBitsSize: Int): String = {
     val secretBits: String = secret.foldLeft(""){ (sb, c) =>
